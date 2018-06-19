@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Container from "../Container";
+
 import homeIcon from "./icon-home.svg";
 import momentsIcon from "./icon-moments.svg";
 import notificationsIcon from "./icon-notifications.svg";
@@ -7,7 +9,6 @@ import messagesIcon from "./icon-messages.svg";
 import logo from "./logo.svg";
 import searchIcon from "./icon-search.svg";
 import userIcon from "./icon-user-logo.png";
-import Container from "../Container";
 
 const HeaderBlock = styled.header`
   width: 100%;
