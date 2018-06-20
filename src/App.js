@@ -1,7 +1,7 @@
 import React from "react";
 import "normalize.css";
 import "flexboxgrid2";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import { Switch, Redirect } from "react-router";
 import ProfilePage from "./ProfilePage";
 
