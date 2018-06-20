@@ -1,15 +1,21 @@
 import React from "react";
 import "normalize.css";
 import "flexboxgrid2";
-import Container from "./Container";
-import Header from "./Header";
-import Canopy from "./Canopy";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Switch, Redirect } from "react-router";
+import ProfilePage from "./ProfilePage";
 
 const App = props => (
   <div>
-    <Header />
-    <Canopy />
+    <BrowserRouter>
+      <div>
+        <Redirect from="/" to="/everyinteract" />
+        <Switch>
+          <Route path="/everyinteract" component={ProfilePage} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   </div>
 );
+
 export default App;
