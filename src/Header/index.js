@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Container from "../Container";
-
+import { NavLink } from "react-router-dom";
 import homeIcon from "./icon-home.svg";
 import momentsIcon from "./icon-moments.svg";
 import notificationsIcon from "./icon-notifications.svg";
@@ -26,21 +26,22 @@ const NavBlock = styled.div`
   justify-content: flex-start;
 `;
 
-const NavLink = styled.a`
+const Link = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   cursor: pointer;
+  text-decoration: none;
   & + * {
     margin-left: 25px;
   }
 `;
 
-const NavLinkIcon = styled.img`
+const LinkIcon = styled.img`
   margin-right: 6px;
 `;
 
-const NavLinkText = styled.div`
+const LinkText = styled.div`
   font-family: HelveticaNeue;
   font-size: 13px;
   font-weight: bold;
@@ -144,22 +145,22 @@ const Header = props => (
     <Container>
       <div className="col-lg-4">
         <NavBlock>
-          <NavLink>
-            <NavLinkIcon src={homeIcon} alt="" />
-            <NavLinkText>Home</NavLinkText>
-          </NavLink>
-          <NavLink>
-            <NavLinkIcon src={momentsIcon} alt="" />
-            <NavLinkText>Moments</NavLinkText>
-          </NavLink>
-          <NavLink>
-            <NavLinkIcon src={notificationsIcon} alt="" />
-            <NavLinkText>Notifications</NavLinkText>
-          </NavLink>
-          <NavLink>
-            <NavLinkIcon src={messagesIcon} alt="" />
-            <NavLinkText>Messages</NavLinkText>
-          </NavLink>
+          <Link to="/everyinteract">
+            <LinkIcon src={homeIcon} alt="" />
+            <LinkText>Home</LinkText>
+          </Link>
+          <Link to="/everyinteract/moments">
+            <LinkIcon src={momentsIcon} alt="" />
+            <LinkText>Moments</LinkText>
+          </Link>
+          <Link to="/everyinteract/notifications">
+            <LinkIcon src={notificationsIcon} alt="" />
+            <LinkText>Notifications</LinkText>
+          </Link>
+          <Link to="/everyinteract/messages">
+            <LinkIcon src={messagesIcon} alt="" />
+            <LinkText>Messages</LinkText>
+          </Link>
         </NavBlock>
       </div>
       <div className="col-lg-4 center-lg">
