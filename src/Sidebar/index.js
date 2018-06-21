@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import tickIcon from "./icon-tick.svg";
-import locationIcon from "./icon-location.svg";
-import linkIcon from "./icon-link.svg";
-import joinedIcon from "./icon-joined.svg";
+import Infoblock from "./Infoblock";
 
 const Wrap = styled.div`
   margin-top: 45px;
@@ -48,7 +46,7 @@ const Description = styled.div`
   line-height: 20px;
 `;
 
-const InfoBlock = styled.div`
+const InfoArea = styled.div`
   margin-top: 15px;
   > div {
     display: flex;
@@ -58,24 +56,6 @@ const InfoBlock = styled.div`
   > div + * {
     margin-top: 10px;
   }
-`;
-
-const InfoBlockIcon = styled.img`
-  dispplay: block;
-`;
-
-const InfoBlockText = styled.div`
-  margin-left: 5px;
-  line-height: 28px;
-  font-size: 14px;
-  color: #657786;
-`;
-
-const InfoBlockLink = styled.a`
-  margin-left: 5px;
-  text-decoration: none;
-  color: #1d81c2;
-  font-size: 14px;
 `;
 
 const ButtonBlock = styled.div`
@@ -115,20 +95,11 @@ const Sidebar = props => (
       UX Design studio focused problem solving creativity. Design to us is how
       can we make things *work* amazing.
     </Description>
-    <InfoBlock>
-      <div>
-        <InfoBlockIcon src={locationIcon} alt="" />
-        <InfoBlockText>London, Uk</InfoBlockText>
-      </div>
-      <div>
-        <InfoBlockIcon src={linkIcon} alt="" />
-        <InfoBlockLink href="#">everyinteract.com</InfoBlockLink>
-      </div>
-      <div>
-        <InfoBlockIcon src={joinedIcon} alt="" />
-        <InfoBlockText>Joined May 2008</InfoBlockText>
-      </div>
-    </InfoBlock>
+    <InfoArea>
+      <Infoblock infotype="location" info="London, Uk" />
+      <Infoblock infotype="link" info="everyinteract.com" />
+      <Infoblock infotype="date" info="Joined May 2008" />
+    </InfoArea>
     <ButtonBlock>
       <Button>Tweet to</Button>
       <Button>Message</Button>
